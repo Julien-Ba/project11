@@ -1,0 +1,10 @@
+.nav-list {
+    display: flex;
+    gap: 2rem;
+
+    &-item {
+        &-active {
+            text-decoration: underline;
+        }
+    }
+}
