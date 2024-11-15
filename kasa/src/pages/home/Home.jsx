@@ -5,7 +5,7 @@ import Gallery from '../../components/gallery/Gallery';
 export default function Home() {
     return (
         <div className='home'>
-            <Banner />
+            <Banner title='Chez vous, partout et ailleurs' />
             <Gallery />
         </div>
     );
