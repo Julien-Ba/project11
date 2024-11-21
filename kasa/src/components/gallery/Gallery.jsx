@@ -1,12 +1,6 @@
 // Gallery.jsx
-import { useAccommodations } from '../../hooks/useAccommodations';
 
-export default function Gallery() {
-    const { accommodations, loading, error } = useAccommodations();
-
-    if (loading) return <div>Loading...</div>;
-    if (error) return <div>Error loading data!</div>;
-
+export default function Gallery({ accommodations }) {
     return (
         <section>
             {accommodations.map((accommodation) => (
