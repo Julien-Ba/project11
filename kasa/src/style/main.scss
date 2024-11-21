@@ -1,5 +1,6 @@
+@use 'colors';
+@use 'reset';
 @import url('https://fonts.googleapis.com/css2?family=Anton&family=Manrope:wght@200..800&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
-@import 'reset';
 
 :root {
     font-family: 'Montserrat', sans-serif;
@@ -8,6 +9,7 @@
 body {
     max-width: 1440px;
     margin: auto;
+    background-color: colors.$bg-light;
 }
 
 main {

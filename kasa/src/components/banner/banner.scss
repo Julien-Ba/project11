@@ -1,5 +1,5 @@
 @use '../../style/placeholders';
-@use '../../style/variables';
+@use '../../style/colors';
 
 .hero {
     position: relative;
@@ -10,16 +10,10 @@
     @extend %flex-center;
     @extend %background-center;
     @extend %radius-big;
+    background-image: url('../../assets/hero_home.png');
 
-    &-home {
-        background-image: url('../../assets/hero_home.png');
-    }
     &-about {
         background-image: url('../../assets/hero_about.png');
-
-        .hero-title {
-            display: none;
-        }
     }
 
     &-filter {
@@ -36,7 +30,7 @@
         position: relative;
         font-size: 4rem;
         font-weight: 700;
-        color: variables.$text-light;
+        color: colors.$text-light;
         @extend %text-outline;
         z-index: 1;
     }
