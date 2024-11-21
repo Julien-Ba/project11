@@ -1,0 +1,13 @@
+@use '../../style/colors';
+@use '../../style/placeholders';
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    margin-block: 40px;
+    padding: 40px;
+    place-items: center;
+    background-color: colors.$bg-medium;
+    @extend %radius-big;
+}

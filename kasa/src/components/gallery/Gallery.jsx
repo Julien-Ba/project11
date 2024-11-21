@@ -1,10 +1,12 @@
-// Gallery.jsx
+import './gallery.scss';
+import '../card/Card';
+import Card from '../card/Card';
 
 export default function Gallery({ accommodations }) {
     return (
-        <section>
+        <section className='gallery'>
             {accommodations.map((accommodation) => (
-                <article key={accommodation.id}>{accommodation.title}</article>
+                <Card accommodation={accommodation} />
             ))}
         </section>
     );

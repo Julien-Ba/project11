@@ -1,0 +1,26 @@
+@use '../../style/colors';
+@use '../../style/placeholders';
+
+.card {
+    position: relative;
+    width: 340px;
+    height: 340px;
+    background-color: colors.$primary;
+    @extend %radius-small;
+
+    &-img {
+        width: 100%;
+        height: 100%;
+        @extend %radius-small;
+    }
+
+    &-title {
+        position: absolute;
+        bottom: 0;
+        z-index: 1;
+        margin: 20px;
+        color: colors.$text-light;
+        font-size: 18px;
+        font-weight: 700;
+    }
+}
