@@ -1,0 +1,27 @@
+@use '../../style/colors';
+@use '../../style/placeholders';
+
+.notfound {
+    @extend %flex-center;
+    flex-direction: column;
+    gap: 100px;
+    margin-block-end: 100px;
+    color: colors.$primary;
+
+    .error {
+        font-size: 288px;
+        font-weight: 700;
+    }
+
+    .description {
+        font-size: 36px;
+        font-weight: 500;
+    }
+
+    .home-link {
+        color: colors.$text-dark;
+        font-size: 18px;
+        font-weight: 500;
+        text-decoration: underline;
+    }
+}
