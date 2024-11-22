@@ -1,0 +1,9 @@
+@use '../../style/colors';
+
+.accommodation {
+    &-title {
+        color: colors.$primary;
+        font-size: 36px;
+        font-weight: 500;
+    }
+}
