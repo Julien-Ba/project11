@@ -2,6 +2,7 @@
 @use '../../style/placeholders';
 
 .footer {
+    margin-block-start: 40px;
     padding: 40px;
     background-color: colors.$bg-dark;
     @extend %flex-center;
@@ -17,5 +18,7 @@
 
     .copyright {
         color: colors.$text-light;
+        font-size: 24px;
+        font-weight: 500;
     }
 }
