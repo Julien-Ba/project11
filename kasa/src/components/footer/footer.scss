@@ -1,5 +1,21 @@
 @use '../../style/colors';
+@use '../../style/placeholders';
 
 .footer {
+    padding: 40px;
     background-color: colors.$bg-dark;
+    @extend %flex-center;
+    flex-direction: column;
+    gap: 40px;
+
+    .logo {
+        width: 122px;
+        height: 39px;
+        margin-block-start: 20px;
+        filter: brightness(100);
+    }
+
+    .copyright {
+        color: colors.$text-light;
+    }
 }
