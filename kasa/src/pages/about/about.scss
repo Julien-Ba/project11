@@ -1,0 +1,16 @@
+@use '../../style/placeholders';
+
+.about__dropdowns {
+    margin-block: 40px;
+    @extend %flex-center;
+    flex-direction: column;
+    gap: 20px;
+
+    .dropdown {
+        width: 1024px;
+
+        &__header > * {
+            font-size: 24px;
+        }
+    }
+}

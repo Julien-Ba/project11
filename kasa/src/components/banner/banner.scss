@@ -12,11 +12,11 @@
     @extend %radius-big;
     background-image: url('../../assets/hero_home.png');
 
-    &-about {
+    &--about {
         background-image: url('../../assets/hero_about.png');
     }
 
-    &-filter {
+    &__filter {
         position: absolute;
         top: 0;
         left: 0;
@@ -26,9 +26,9 @@
         @extend %radius-big;
     }
 
-    &-title {
+    &__title {
         position: relative;
-        font-size: 64px;
+        font-size: 48px;
         font-weight: 700;
         color: colors.$text-light;
         @extend %text-outline;

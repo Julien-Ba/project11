@@ -1,0 +1,48 @@
+@use '../../style/colors';
+@use '../../style/placeholders';
+
+.dropdown {
+    &__header {
+        //height: 52px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 8px 20px;
+        @extend %radius-small;
+        background-color: colors.$primary;
+        color: colors.$text-light;
+
+        &-title {
+            font-size: 18px;
+            font-weight: 700;
+        }
+        &-icon {
+            width: 36px;
+            height: 36px;
+            text-align: center;
+            font-size: 22px;
+        }
+    }
+
+    &__content {
+        display: none;
+        padding: 20px;
+        background-color: colors.$bg-light;
+        font-size: 18px;
+        text-wrap: pretty;
+    }
+}
+
+.dropdown--open {
+    transition: all 500ms ease;
+
+    .dropdown {
+        &__header-icon {
+            transform: rotate(180deg);
+        }
+
+        &__content {
+            display: block;
+        }
+    }
+}

@@ -6,9 +6,9 @@ export default function Banner({ title }) {
     const route = location.pathname === '/' ? 'home' : 'about';
 
     return (
-        <section className={`hero hero-${route}`}>
-            <div className='hero-filter'></div>
-            <h1 className='hero-title'>{title}</h1>
+        <section className={`hero hero--${route}`}>
+            <div className='hero__filter'></div>
+            <h1 className='hero__title'>{title}</h1>
         </section>
     );
 }

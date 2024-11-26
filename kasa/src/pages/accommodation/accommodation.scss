@@ -1,9 +1,85 @@
 @use '../../style/colors';
+@use '../../style/placeholders';
 
 .accommodation {
-    &-title {
-        color: colors.$primary;
-        font-size: 36px;
-        font-weight: 500;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 20px;
+    align-items: center;
+
+    .carousel {
+        grid-column: span 2;
+    }
+
+    &__header {
+        &-title {
+            color: colors.$primary;
+            font-size: 36px;
+            font-weight: 500;
+        }
+
+        &-location {
+            color: colors.$text-dark;
+            font-size: 18px;
+            font-weight: 500;
+        }
+    }
+
+    &__host {
+        justify-self: end;
+        display: flex;
+        gap: 20px;
+
+        &-name {
+            width: min-content;
+            word-break: keep-all;
+            text-align: end;
+            color: colors.$primary;
+            font-size: 18px;
+            font-weight: 500;
+        }
+        &-image {
+            width: 64px;
+            height: 64px;
+            border-radius: 50%;
+            background-color: colors.$placeholder-dark;
+        }
+    }
+
+    &__meta {
+        grid-column: span 2;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        &__tags {
+            display: flex;
+            gap: 10px;
+
+            &-item {
+                width: 115px;
+                min-width: min-content;
+                height: min-content;
+                padding: 2px 10px;
+                background-color: colors.$primary;
+                @extend %radius-small;
+                text-align: center;
+                text-wrap: nowrap;
+                color: colors.$text-light;
+                font-size: 14px;
+                font-weight: 700;
+            }
+        }
+    }
+
+    &__dropdowns {
+        grid-column: span 2;
+        display: flex;
+        justify-content: space-between;
+        gap: 80px;
+
+        .dropdown {
+            width: 100%;
+        }
     }
 }

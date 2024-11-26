@@ -18,22 +18,25 @@ export default function Carousel({ images }) {
 
     return (
         <section className='carousel'>
-            {/* Only show arrows if there's more than one image */}
+            {/* Only show arrows and counter if there's more than one image */}
             {length > 1 && (
                 <>
                     <i
-                        className='fa-solid fa-chevron-left carousel-arrow carousel-arrow-left'
+                        className='fa-solid fa-chevron-left carousel__arrow carousel__arrow--left'
                         onClick={prevSlide}
                         aria-label='Previous image'
                     />
                     <i
-                        className='fa-solid fa-chevron-right carousel-arrow carousel-arrow-right'
+                        className='fa-solid fa-chevron-right carousel__arrow carousel__arrow--right'
                         onClick={nextSlide}
                         aria-label='Next image'
                     />
+                    <div className='carousel__counter'>
+                        {current + 1}/{length}
+                    </div>
                 </>
             )}
-            <img src={images[current]} alt={`Slide ${current + 1}`} className='carousel-image' />
+            <img src={images[current]} alt={`Slide ${current + 1}`} className='carousel__image' />
         </section>
     );
 }
