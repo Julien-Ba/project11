@@ -6,8 +6,10 @@ export function useAccommodations() {
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
 
+    const publicUrl = process.env.PUBLIC_URL || '';
+
     useEffect(() => {
-        fetch('/data/accommodation.json')
+        fetch(`${publicUrl}/data/accommodation.json`)
             .then((res) => res.json())
             .then((data) => {
                 setAccommodations(data);
