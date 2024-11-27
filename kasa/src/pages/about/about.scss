@@ -2,13 +2,14 @@
 @use '../../style/placeholders';
 
 .about__dropdowns {
-    margin-block: 40px;
+    /* @link https://utopia.fyi/clamp/calculator?a=320,1440,20—40|0—106 */
+    margin: clamp(20px, 14.2857px + 1.7857vw, 40px) clamp(0px, -30.2857px + 9.4643vw, 106px);
     @extend %flex-center;
     flex-direction: column;
     gap: 20px;
 
     .dropdown {
-        width: 1024px;
+        width: 100%;
 
         &__header-title {
             font-size: fonts.$fluid-13-24;
