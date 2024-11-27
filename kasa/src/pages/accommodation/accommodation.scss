@@ -1,4 +1,5 @@
 @use '../../style/colors';
+@use '../../style/fonts';
 @use '../../style/placeholders';
 
 .accommodation {
@@ -14,13 +15,13 @@
     &__header {
         &-title {
             color: colors.$primary;
-            font-size: 36px;
+            font-size: fonts.$fluid-18-36;
             font-weight: 500;
         }
 
         &-location {
             color: colors.$text-dark;
-            font-size: 18px;
+            font-size: fonts.$fluid-14-18;
             font-weight: 500;
         }
     }
@@ -35,7 +36,7 @@
             word-break: keep-all;
             text-align: end;
             color: colors.$primary;
-            font-size: 18px;
+            font-size: fonts.$fluid-12-18;
             font-weight: 500;
         }
         &-image {
@@ -66,7 +67,7 @@
                 text-align: center;
                 text-wrap: nowrap;
                 color: colors.$text-light;
-                font-size: 14px;
+                font-size: fonts.$fluid-10-14;
                 font-weight: 700;
             }
         }

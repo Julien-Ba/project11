@@ -1,7 +1,9 @@
+@use '../../style/fonts';
+
 .nav-list {
     display: flex;
-    gap: 2rem;
-    font-size: 24px;
+    gap: 40px;
+    font-size: fonts.$fluid-12-24;
     font-weight: 500;
 
     &-item {

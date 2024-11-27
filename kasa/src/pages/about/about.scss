@@ -1,3 +1,4 @@
+@use '../../style/fonts';
 @use '../../style/placeholders';
 
 .about__dropdowns {
@@ -9,8 +10,8 @@
     .dropdown {
         width: 1024px;
 
-        &__header > * {
-            font-size: 24px;
+        &__header-title {
+            font-size: fonts.$fluid-13-24;
         }
     }
 }

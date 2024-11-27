@@ -1,5 +1,6 @@
 @use '../../style/placeholders';
 @use '../../style/colors';
+@use '../../style/fonts';
 
 .hero {
     position: relative;
@@ -28,7 +29,7 @@
 
     &__title {
         position: relative;
-        font-size: 48px;
+        font-size: fonts.$fluid-24-48;
         font-weight: 700;
         color: colors.$text-light;
         @extend %text-outline;

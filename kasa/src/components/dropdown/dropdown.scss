@@ -1,4 +1,5 @@
 @use '../../style/colors';
+@use '../../style/fonts';
 @use '../../style/placeholders';
 
 .dropdown {
@@ -13,14 +14,14 @@
         color: colors.$text-light;
 
         &-title {
-            font-size: 18px;
+            font-size: fonts.$fluid-13-18;
             font-weight: 700;
         }
         &-icon {
             width: 36px;
             height: 36px;
             text-align: center;
-            font-size: 22px;
+            font-size: fonts.$fluid-16-24;
         }
     }
 
@@ -28,7 +29,7 @@
         display: none;
         padding: 20px;
         background-color: colors.$bg-light;
-        font-size: 18px;
+        font-size: fonts.$fluid-12-18;
         text-wrap: pretty;
     }
 }

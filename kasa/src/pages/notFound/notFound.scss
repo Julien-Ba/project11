@@ -1,4 +1,5 @@
 @use '../../style/colors';
+@use '../../style/fonts';
 @use '../../style/placeholders';
 
 .notfound {
@@ -9,18 +10,18 @@
     color: colors.$primary;
 
     .error {
-        font-size: 288px;
+        font-size: fonts.$fluid-96-288;
         font-weight: 700;
     }
 
     .description {
-        font-size: 36px;
+        font-size: fonts.$fluid-18-36;
         font-weight: 500;
     }
 
     .home-link {
         color: colors.$text-dark;
-        font-size: 18px;
+        font-size: fonts.$fluid-14-18;
         font-weight: 500;
         text-decoration: underline;
     }
