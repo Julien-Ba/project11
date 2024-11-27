@@ -1,3 +1,4 @@
+@use 'breakpoints';
 @use 'colors';
 @use 'reset';
 @import url('https://fonts.googleapis.com/css2?family=Anton&family=Manrope:wght@200..800&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
@@ -7,11 +8,18 @@
 }
 
 body {
-    max-width: 1440px;
+    max-width: breakpoints.$max-screen;
     margin: auto;
     background-color: colors.$bg-lighter;
 }
 
 main {
     margin-inline: 100px;
+}
+
+@include breakpoints.mobile() {
+    main {
+        /* @link https://utopia.fyi/clamp/calculator?a=320,767,20—100 */
+        margin-inline: clamp(20px, -37.2707px + 17.8971vw, 100px);
+    }
 }

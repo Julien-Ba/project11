@@ -1,6 +1,6 @@
 @use '../../style/colors';
 @use '../../style/fonts';
-@use '../../style/placeholders';
+@use '../../style/mixins';
 
 .accommodation {
     display: grid;
@@ -63,7 +63,7 @@
                 height: min-content;
                 padding: 2px 10px;
                 background-color: colors.$primary;
-                @extend %radius-small;
+                @include mixins.radius-small;
                 text-align: center;
                 text-wrap: nowrap;
                 color: colors.$text-light;

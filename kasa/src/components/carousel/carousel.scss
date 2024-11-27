@@ -1,6 +1,7 @@
+@use '../../style/breakpoints';
 @use '../../style/colors';
 @use '../../style/fonts';
-@use '../../style/placeholders';
+@use '../../style/mixins';
 
 .carousel {
     position: relative;
@@ -37,6 +38,12 @@
     &__image {
         width: 100%;
         height: 100%;
-        @extend %radius-big;
+        @include mixins.radius-big;
+    }
+}
+
+@media (max-width: breakpoints.$mobile) {
+    .carousel__counter {
+        display: none;
     }
 }

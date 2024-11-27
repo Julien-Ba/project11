@@ -1,13 +1,24 @@
+@use '../../style/breakpoints';
 @use '../../style/colors';
-@use '../../style/placeholders';
+@use '../../style/mixins';
 
 .gallery {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, clamp(280px, 23.61vw, 300px)), 1fr));
     gap: 40px;
     margin-block: 40px;
     padding: 40px;
     place-items: center;
     background-color: colors.$bg-medium;
-    @extend %radius-big;
+    @include mixins.radius-big;
+}
+
+@media (max-width: breakpoints.$mobile) {
+    .gallery {
+        /* @link https://utopia.fyi/clamp/calculator?a=320,767,20%E2%80%9440|0%E2%80%9440 */
+        gap: clamp(20px, 5.6823px + 4.4743vw, 40px);
+        margin-block: clamp(0px, -28.6353px + 8.9485vw, 40px);
+        padding: clamp(20px, 5.6823px + 4.4743vw, 40px) clamp(0px, -28.6353px + 8.9485vw, 40px);
+        background-color: inherit;
+    }
 }

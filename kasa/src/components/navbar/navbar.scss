@@ -1,3 +1,4 @@
+@use '../../style/breakpoints';
 @use '../../style/fonts';
 
 .nav-list {
@@ -10,5 +11,12 @@
         &-active {
             text-decoration: underline;
         }
+    }
+}
+
+@include breakpoints.mobile() {
+    .nav-list {
+        /* @link https://utopia.fyi/clamp/calculator?a=320,767,10%E2%80%9440 */
+        gap: clamp(10px, -11.4765px + 6.7114vw, 40px);
     }
 }

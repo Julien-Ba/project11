@@ -1,3 +1,4 @@
+@use '../../style/breakpoints';
 @use '../../style/colors';
 @use '../../style/fonts';
 @use '../../style/placeholders';
@@ -18,8 +19,29 @@
     }
 
     .copyright {
+        display: flex;
+        text-align: center;
         color: colors.$text-light;
         font-size: fonts.$fluid-12-24;
         font-weight: 500;
+
+        span:first-child::after {
+            content: '\00a0';
+        }
+    }
+}
+
+@media (max-width: breakpoints.$mobile) {
+    .footer {
+        /* @link https://utopia.fyi/clamp/calculator?a=320,767,20—40 */
+        margin-block-start: clamp(20px, 5.6823px + 4.4743vw, 40px);
+
+        .copyright {
+            flex-direction: column;
+
+            span:first-child::after {
+                content: none;
+            }
+        }
     }
 }

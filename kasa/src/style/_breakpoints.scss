@@ -1,0 +1,11 @@
+@use './placeholders';
+
+$min-screen: 320px;
+$mobile: 768px;
+$max-screen: 1440px;
+
+@mixin mobile() {
+    @media (max-width: $mobile) {
+        @content;
+    }
+}
