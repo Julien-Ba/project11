@@ -7,8 +7,16 @@
     font-size: fonts.$fluid-12-24;
     font-weight: 500;
 
-    &-item--active {
-        text-decoration: underline;
+    [class*='item'] {
+        transition: transform 200ms ease-in;
+
+        &:hover {
+            transform: scale(1.02);
+        }
+
+        &[class$='active'] {
+            text-decoration: underline;
+        }
     }
 }
 
