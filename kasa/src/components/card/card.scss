@@ -8,10 +8,17 @@
     aspect-ratio: 1;
     background-color: colors.$primary;
     @include radius-small;
+    overflow: hidden;
 
     &__img {
         @include size(100%);
         @include radius-small;
+        transition: transform 300ms ease-in, filter 300ms ease-in;
+
+        &:hover {
+            transform: scale(1.05);
+            filter: saturate(1.05) brightness(1.02) contrast(1.02);
+        }
     }
 
     &__title {
