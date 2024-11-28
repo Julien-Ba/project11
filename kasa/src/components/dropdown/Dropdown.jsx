@@ -3,11 +3,11 @@ import { useState } from 'react';
 
 export default function Dropdown({ title = '', content = '' }) {
     const [isOpen, setIsOpen] = useState(false);
-    const handleClick = () => {
+    function handleClick() {
         setIsOpen(!isOpen);
-    };
+    }
 
-    const renderContent = () => {
+    function renderContent() {
         if (Array.isArray(content)) {
             return (
                 <ul className='dropdown__content'>
@@ -25,7 +25,7 @@ export default function Dropdown({ title = '', content = '' }) {
                 <p className='dropdown__content-text'>{content}</p>
             </div>
         );
-    };
+    }
 
     return (
         <div className={`dropdown ${isOpen ? 'dropdown--open' : ''}`}>
