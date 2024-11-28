@@ -40,7 +40,7 @@ export default function Dropdown({ title = '', content = '' }) {
                     aria-controls='dropdown-content'
                     aria-labelledby='dropdown-title'
                 >
-                    <i className='fa-solid fa-chevron-down' aria-hidden='true' />
+                    <i className='fa-solid fa-chevron-up' aria-hidden='true' />
                 </button>
             </div>
             {renderContent()}
