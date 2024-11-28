@@ -10,7 +10,7 @@ export default function Dropdown({ title = '', content = '' }) {
     function renderContent() {
         if (Array.isArray(content)) {
             return (
-                <ul className='dropdown__content'>
+                <ul id='dropdown-content' className='dropdown__content'>
                     {content.map((item) => (
                         <li key={item} className='dropdown__content-item'>
                             {item}
@@ -21,7 +21,7 @@ export default function Dropdown({ title = '', content = '' }) {
         }
 
         return (
-            <div className='dropdown__content'>
+            <div id='dropdown-content' className='dropdown__content'>
                 <p className='dropdown__content-text'>{content}</p>
             </div>
         );
@@ -30,13 +30,18 @@ export default function Dropdown({ title = '', content = '' }) {
     return (
         <div className={`dropdown ${isOpen ? 'dropdown--open' : ''}`}>
             <div className='dropdown__header'>
-                <p className='dropdown__header-title'>{title}</p>
-                <i
-                    className='fa-solid fa-chevron-down dropdown__header-icon'
+                <p id='dropdown-title' className='dropdown__header-title'>
+                    {title}
+                </p>
+                <button
+                    className='dropdown__header-button'
                     onClick={handleClick}
-                    role='button'
-                    tabIndex='0'
-                ></i>
+                    aria-expanded={isOpen}
+                    aria-controls='dropdown-content'
+                    aria-labelledby='dropdown-title'
+                >
+                    <i className='fa-solid fa-chevron-down' aria-hidden='true' />
+                </button>
             </div>
             {renderContent()}
         </div>

@@ -18,8 +18,10 @@
             font-size: fonts.$fluid-13-18;
             font-weight: 700;
         }
-        &-icon {
+        &-button {
             @include size(calc(fonts.$fluid-16-24 * 1.5));
+            background-color: inherit;
+            border: none;
             font-size: fonts.$fluid-16-24;
         }
     }
