@@ -33,16 +33,14 @@ export default function Accommodation() {
                     className='accommodation__host-image'
                 />
             </div>
-            <div className='accommodation__meta'>
-                <ul className='accommodation__meta__tags'>
-                    {accommodation.tags.map((tag) => (
-                        <li key={tag} className='accommodation__meta__tags-item'>
-                            {tag}
-                        </li>
-                    ))}
-                </ul>
-                <Rating rating={accommodation.rating} />
-            </div>
+            <ul className='accommodation__tags'>
+                {accommodation.tags.map((tag) => (
+                    <li key={tag} className='accommodation__tags-item'>
+                        {tag}
+                    </li>
+                ))}
+            </ul>
+            <Rating rating={accommodation.rating} />
             <div className='accommodation__dropdowns'>
                 <Dropdown title='Description' content={accommodation.description} />
                 <Dropdown title='Équipements' content={accommodation.equipments} />

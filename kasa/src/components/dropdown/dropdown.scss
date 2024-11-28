@@ -1,13 +1,14 @@
+@use '../../style/breakpoints';
 @use '../../style/colors';
 @use '../../style/fonts';
 @use '../../style/mixins';
 
 .dropdown {
     &__header {
-        //height: 52px;
         display: flex;
         justify-content: space-between;
         align-items: center;
+        text-align: center;
         padding: 8px 20px;
         @include mixins.radius-small;
         background-color: colors.$primary;
@@ -18,9 +19,8 @@
             font-weight: 700;
         }
         &-icon {
-            width: 36px;
-            height: 36px;
-            text-align: center;
+            width: calc(fonts.$fluid-16-24 * 1.5);
+            height: calc(fonts.$fluid-16-24 * 1.5);
             font-size: fonts.$fluid-16-24;
         }
     }
@@ -45,5 +45,11 @@
         &__content {
             display: block;
         }
+    }
+}
+
+@include breakpoints.mobile() {
+    .dropdown__header {
+        padding-inline: 10px;
     }
 }

@@ -43,7 +43,12 @@
 }
 
 @media (max-width: breakpoints.$mobile) {
-    .carousel__counter {
-        display: none;
+    .carousel {
+        height: auto;
+        aspect-ratio: 67/51;
+
+        &__counter {
+            display: none;
+        }
     }
 }
