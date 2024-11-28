@@ -23,28 +23,41 @@
             background-color: inherit;
             border: none;
             font-size: fonts.$fluid-16-24;
+            transition: transform 300ms linear;
         }
     }
 
     &__content {
-        display: none;
-        padding: 20px;
+        height: 0;
+        opacity: 0;
+        overflow: hidden;
+        padding: 0 20px;
         background-color: colors.$bg-light;
         font-size: fonts.$fluid-12-18;
         text-wrap: pretty;
+        transition: all 300ms ease-in;
+
+        > * {
+            transform: translateY(-100%);
+            transition: transform 300ms ease-in;
+        }
     }
 }
 
 .dropdown--open {
-    transition: all 500ms ease;
-
     .dropdown {
-        &__header-icon {
-            transform: rotate(180deg);
+        &__header-button {
+            transform: rotate(-180deg);
         }
 
         &__content {
-            display: block;
+            height: inherit;
+            opacity: 1;
+            padding: 20px;
+
+            > * {
+                transform: translateY(0);
+            }
         }
     }
 }
