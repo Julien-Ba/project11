@@ -13,6 +13,25 @@ body {
     background-color: colors.$bg-lighter;
 }
 
+/*
+    The following code inside #root does not follow the model but it made sense to set the footer dynamically at the bottom of the page.
+    Can be deleted without impacting anything else if we want to keep a static gap between the main and the footer.
+*/
+#root {
+    min-height: 100dvh;
+    display: flex;
+    flex-direction: column;
+
+    main {
+        flex: 1;
+    }
+
+    .header,
+    .footer {
+        flex-shrink: 0;
+    }
+}
+
 main {
     margin-inline: 100px;
 }
