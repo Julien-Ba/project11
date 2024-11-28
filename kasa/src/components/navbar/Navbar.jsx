@@ -12,7 +12,7 @@ export default function Navbar() {
                     <Link to='/'>Accueil</Link>
                 </li>
                 <li className={route === '/about' ? 'nav__list-item--active' : 'nav__list-item'}>
-                    <Link to='/about'>A propos</Link>
+                    <Link to='/about'>A Propos</Link>
                 </li>
             </ul>
         </nav>
