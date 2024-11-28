@@ -1,6 +1,6 @@
 @use '../../style/breakpoints';
 @use '../../style/colors';
-@use '../../style/mixins';
+@use '../../style/mixins' as *;
 
 .gallery {
     display: grid;
@@ -10,7 +10,7 @@
     padding: 40px;
     place-items: center;
     background-color: colors.$bg-medium;
-    @include mixins.radius-big;
+    @include radius-big;
 }
 
 @media (max-width: breakpoints.$mobile) {

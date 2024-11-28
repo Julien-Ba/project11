@@ -42,8 +42,7 @@
             font-weight: 500;
         }
         &-image {
-            width: 64px;
-            height: 64px;
+            @include size(64px);
             border-radius: 50%;
             background-color: colors.$placeholder-dark;
         }
@@ -56,8 +55,8 @@
 
         &-item {
             width: 115px;
-            min-width: min-content;
-            height: min-content;
+            min-width: fit-content;
+            height: fit-content;
             padding: 2px 10px;
             background-color: colors.$primary;
             @include radius-small;

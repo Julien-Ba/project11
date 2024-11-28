@@ -1,7 +1,7 @@
 @use '../../style/breakpoints';
 @use '../../style/colors';
 @use '../../style/fonts';
-@use '../../style/mixins';
+@use '../../style/mixins' as *;
 
 .dropdown {
     &__header {
@@ -10,7 +10,7 @@
         align-items: center;
         text-align: center;
         padding: 8px 20px;
-        @include mixins.radius-small;
+        @include radius-small;
         background-color: colors.$primary;
         color: colors.$text-light;
 
@@ -19,8 +19,7 @@
             font-weight: 700;
         }
         &-icon {
-            width: calc(fonts.$fluid-16-24 * 1.5);
-            height: calc(fonts.$fluid-16-24 * 1.5);
+            @include size(calc(fonts.$fluid-16-24 * 1.5));
             font-size: fonts.$fluid-16-24;
         }
     }

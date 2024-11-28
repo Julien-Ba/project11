@@ -7,11 +7,11 @@ export default function Navbar() {
 
     return (
         <nav className='nav'>
-            <ul className='nav-list'>
-                <li className={route === '/' ? 'nav-list-item-active' : 'nav-list-item'}>
+            <ul className='nav__list'>
+                <li className={route === '/' ? 'nav__list-item--active' : 'nav__list-item'}>
                     <Link to='/'>Accueil</Link>
                 </li>
-                <li className={route === '/about' ? 'nav-list-item-active' : 'nav-list-item'}>
+                <li className={route === '/about' ? 'nav__list-item--active' : 'nav__list-item'}>
                     <Link to='/about'>A propos</Link>
                 </li>
             </ul>

@@ -1,8 +1,8 @@
 @use '../../style/breakpoints';
-@use '../../style/mixins';
-@use '../../style/placeholders';
 @use '../../style/colors';
 @use '../../style/fonts';
+@use '../../style/mixins' as *;
+@use '../../style/placeholders';
 
 .hero {
     position: relative;
@@ -13,9 +13,9 @@
     margin-inline: auto;
     @extend %flex-center;
     @extend %background-center;
-    @include mixins.radius-big;
+    @include radius-big;
     background-image: url('../../assets/hero_home.png');
-    box-shadow: rgba(0, 0, 0, 0.3) 0 4px 4px;
+    box-shadow: rgba($color: colors.$bg-dark, $alpha: 0.3) 0 4px 4px;
 
     &--about {
         background-image: url('../../assets/hero_about.png');
@@ -23,12 +23,10 @@
 
     &__filter {
         position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-color: rgba(0, 0, 0, 0.6);
-        @include mixins.radius-big;
+        inset: 0;
+        @include size(100%);
+        background-color: rgba($color: colors.$bg-dark, $alpha: 0.6);
+        @include radius-big;
     }
 
     &__title {
@@ -46,11 +44,11 @@
     .hero {
         /* @link https://utopia.fyi/clamp/calculator?a=320,767,111—223 */
         height: clamp(111px, 30.821px + 25.0559vw, 223px);
-        @include mixins.radius-small;
+        @include radius-small;
         box-shadow: none;
 
         &__filter {
-            @include mixins.radius-small;
+            @include radius-small;
         }
 
         &__title {

@@ -1,21 +1,19 @@
 @use '../../style/breakpoints';
 @use '../../style/fonts';
 
-.nav-list {
+.nav__list {
     display: flex;
     gap: 40px;
     font-size: fonts.$fluid-12-24;
     font-weight: 500;
 
-    &-item {
-        &-active {
-            text-decoration: underline;
-        }
+    &-item--active {
+        text-decoration: underline;
     }
 }
 
 @include breakpoints.mobile() {
-    .nav-list {
+    .nav__list {
         /* @link https://utopia.fyi/clamp/calculator?a=320,767,10%E2%80%9440 */
         gap: clamp(10px, -11.4765px + 6.7114vw, 40px);
     }
